@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+
+
+    <label >Module:</label>
+    <input type="text" id="module" name="module" placeholder="module"><br><br>
+    <label >Start:</label>
+    <input type="text" id="start" name="start" placeholder="start"><br><br>
+
+    <input type="radio", name="multi" value="with_multi">
+    <label >*1.5 *25.4</label><br>
+    <input type="radio" name="multi" value="without_multi">
+    <label>without multiplication</label><br>
+
+    <br><br>
+    <input type="submit" name="btn" value='Get Output' class='transparent_btn'>
+</form>
+
+  {% for your_list_element in jasmin %}
+    <h2>{{your_list_element}}</h2>
+  {% endfor %}
+
+
+</body>
+</html>
